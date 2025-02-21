@@ -1,37 +1,46 @@
 package com.example.explorecalijpa.biz;
 
-import org.springframework.stereotype.Service;
+import java.util.Collections;
 import java.util.List;
 
-import com.example.explorecalijpa.models.Difficulty;
-import com.example.explorecalijpa.models.Region;
-import com.example.explorecalijpa.models.Tour;
-import com.example.explorecalijpa.models.TourPackage;
-import com.example.explorecalijpa.repos.TourPackageRepository;
-import com.example.explorecalijpa.repos.TourRepository;
+import org.springframework.stereotype.Service;
+
+import com.example.explorecalijpa.model.Difficulty;
+import com.example.explorecalijpa.model.Region;
+import com.example.explorecalijpa.model.Tour;
+import com.example.explorecalijpa.model.TourPackage;
+import com.example.explorecalijpa.repo.TourPackageRepository;
+import com.example.explorecalijpa.repo.TourRepository;
 
 @Service
 public class TourService {
-  private TourRepository tourRepo;
-  private TourPackageRepository tourPackageRepo;
+  private TourPackageRepository tourPackageRepository;
+  private TourRepository tourRepository;
 
-  public TourService(TourRepository tourRepo, TourPackageRepository tourPackageRepo) {
-    this.tourRepo = tourRepo;
-    this.tourPackageRepo = tourPackageRepo;
+  public TourService(TourPackageRepository tourPackageRepository, TourRepository tourRepository) {
+    this.tourPackageRepository = tourPackageRepository;
+    this.tourRepository = tourRepository;
   }
 
   public Tour createTour(String tourPackageName, String title,
       String description, String blurb, Integer price, String duration,
       String bullets, String keywords, Difficulty difficulty, Region region) {
 
-    TourPackage tourPackage = tourPackageRepo.findById(tourPackageName)
+    TourPackage tourPackage = tourPackageRepository.findByName(tourPackageName)
         .orElseThrow(() -> new RuntimeException("Tour Package not found for id:" + tourPackageName));
-    return tourRepo.save(new Tour(title, description, blurb,
+    return tourRepository.save(new Tour(title, description, blurb,
         price, duration, bullets, keywords, tourPackage, difficulty, region));
   }
 
-  public long total() {
-    return tourRepo.count();
+  public List<Tour> lookupByDifficulty(Difficulty difficulty) {
+    return tourRepository.findByDifficulty(difficulty);
   }
 
+  public List<Tour> lookupByPackage(String tourPackageCode) {
+    return tourRepository.findByTourPackageCode(tourPackageCode);
+  }
+
+  public long total() {
+    return tourRepository.count();
+  }
 }

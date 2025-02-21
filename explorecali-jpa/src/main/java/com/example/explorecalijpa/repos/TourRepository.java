@@ -4,5 +4,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.example.explorecalijpa.models.Tour;
 
 public interface TourRepository extends JpaRepository<Tour, Integer> {
+  List<Tour> findByDifficulty(Difficulty diff);
 
+  List<Tour> findByTourPackageCode(String code);
 }

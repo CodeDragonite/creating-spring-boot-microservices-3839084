@@ -1,31 +1,30 @@
 package com.example.explorecalijpa.biz;
 
-import org.springframework.stereotype.Service;
 import java.util.List;
 
-import com.example.explorecalijpa.models.TourPackage;
-import com.example.explorecalijpa.repos.TourPackageRepository;
+import org.springframework.stereotype.Service;
+
+import com.example.explorecalijpa.model.TourPackage;
+import com.example.explorecalijpa.repo.TourPackageRepository;
 
 @Service
 public class TourPackageService {
+  private TourPackageRepository tourPackageRepository;
 
-  private TourPackageRepository tourPackageRepo;
-
-  public TourPackageService(TourPackageRepository tourPackageRepo) {
-    this.tourPackageRepo = tourPackageRepo;
+  public TourPackageService(TourPackageRepository tourPackageRepository) {
+    this.tourPackageRepository = tourPackageRepository;
   }
 
-  public TourPackage creatTourPackage(String code, String name) {
-    return tourPackageRepo.findById(code)
-        .orElse(
-            tourPackageRepo.save(new TourPackage(code, name)));
+  public TourPackage createTourPackage(String code, String name) {
+    return tourPackageRepository.findById(code)
+        .orElse(tourPackageRepository.save(new TourPackage(code, name)));
   }
 
   public List<TourPackage> lookupAll() {
-    return tourPackageRepo.findAll();
+    return tourPackageRepository.findAll();
   }
 
   public long total() {
-    return tourPackageRepo.count();
+    return tourPackageRepository.count();
   }
 }
