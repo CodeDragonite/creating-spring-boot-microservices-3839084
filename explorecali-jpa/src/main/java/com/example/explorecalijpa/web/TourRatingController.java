@@ -88,7 +88,8 @@ public class TourRatingController {
    */
   @PutMapping
   @Operation(summary = "Modify All Tour Rating Attributes")
-  public RatingDto updateWithPut(@PathVariable(value = "tourId") int tourId, @RequestBody @Valid RatingDto ratingDto) {
+  public RatingDto updateWithPut(@PathVariable(value = "tourId") int tourId, 
+    @RequestBody @Valid RatingDto ratingDto) {
     log.info("PUT /tours/{}/ratings", tourId);
     return new RatingDto(tourRatingService.update(tourId, ratingDto.getCustomerId(),
         ratingDto.getScore(), ratingDto.getComment()));
