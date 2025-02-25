@@ -7,10 +7,10 @@ import java.util.OptionalDouble;
 
 import org.springframework.stereotype.Service;
 
-import com.example.explorecalijpa.model.Tour;
-import com.example.explorecalijpa.model.TourRating;
-import com.example.explorecalijpa.repo.TourRatingRepository;
-import com.example.explorecalijpa.repo.TourRepository;
+import com.example.explorecalijpa.models.Tour;
+import com.example.explorecalijpa.models.TourRating;
+import com.example.explorecalijpa.repos.TourRatingRepository;
+import com.example.explorecalijpa.repos.TourRepository;
 
 import jakarta.transaction.Transactional;
 import jakarta.validation.ConstraintViolationException;

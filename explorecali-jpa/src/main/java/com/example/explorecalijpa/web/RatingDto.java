@@ -1,6 +1,6 @@
 package com.example.explorecalijpa.web;
 
-import com.example.explorecalijpa.model.TourRating;
+import com.example.explorecalijpa.models.TourRating;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;

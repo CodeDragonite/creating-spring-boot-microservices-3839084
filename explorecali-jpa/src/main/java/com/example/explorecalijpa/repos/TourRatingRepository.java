@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-import com.example.explorecalijpa.model.TourRating;
+import com.example.explorecalijpa.models.TourRating;
 
 /**
  * Tour Rating Repository Interface

@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.example.explorecalijpa.model.TourPackage;
-import com.example.explorecalijpa.repo.TourPackageRepository;
+import com.example.explorecalijpa.models.TourPackage;
+import com.example.explorecalijpa.repos.TourPackageRepository;
 
 @Service
 public class TourPackageService {

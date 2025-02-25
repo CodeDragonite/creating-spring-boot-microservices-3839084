@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.explorecalijpa.business.TourRatingService;
-import com.example.explorecalijpa.model.TourRating;
+import com.example.explorecalijpa.biz.TourRatingService;
+import com.example.explorecalijpa.models.TourRating;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;

@@ -5,12 +5,12 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.example.explorecalijpa.model.Difficulty;
-import com.example.explorecalijpa.model.Region;
-import com.example.explorecalijpa.model.Tour;
-import com.example.explorecalijpa.model.TourPackage;
-import com.example.explorecalijpa.repo.TourPackageRepository;
-import com.example.explorecalijpa.repo.TourRepository;
+import com.example.explorecalijpa.models.Difficulty;
+import com.example.explorecalijpa.models.Region;
+import com.example.explorecalijpa.models.Tour;
+import com.example.explorecalijpa.models.TourPackage;
+import com.example.explorecalijpa.repos.TourPackageRepository;
+import com.example.explorecalijpa.repos.TourRepository;
 
 @Service
 public class TourService {
