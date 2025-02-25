@@ -1,0 +1,30 @@
+2025-02-25T15:29:33.772Z  INFO 33804 --- [explorecali-jpa] [main] c.e.e.ExplorecaliJpaApplication          : Starting ExplorecaliJpaApplication using Java 21.0.5 with PID 33804 (/workspaces/creating-spring-boot-microservices-3839084/explorecali-jpa/target/classes started by vscode in /workspaces/creating-spring-boot-microservices-3839084/explorecali-jpa)
+2025-02-25T15:29:33.774Z DEBUG 33804 --- [explorecali-jpa] [main] c.e.e.ExplorecaliJpaApplication          : Running with Spring Boot v3.3.9-SNAPSHOT, Spring v6.1.17
+2025-02-25T15:29:33.775Z  INFO 33804 --- [explorecali-jpa] [main] c.e.e.ExplorecaliJpaApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-02-25T15:29:34.937Z  INFO 33804 --- [explorecali-jpa] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-25T15:29:34.977Z  INFO 33804 --- [explorecali-jpa] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 3 JPA repository interfaces.
+2025-02-25T15:29:35.732Z  INFO 33804 --- [explorecali-jpa] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-25T15:29:35.744Z  INFO 33804 --- [explorecali-jpa] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-25T15:29:35.744Z  INFO 33804 --- [explorecali-jpa] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-02-25T15:29:35.786Z  INFO 33804 --- [explorecali-jpa] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-25T15:29:35.787Z  INFO 33804 --- [explorecali-jpa] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1952 ms
+2025-02-25T15:29:36.123Z  INFO 33804 --- [explorecali-jpa] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-25T15:29:36.288Z  INFO 33804 --- [explorecali-jpa] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:b8e1227f-567f-408c-b715-4eac5893ddbd user=SA
+2025-02-25T15:29:36.289Z  INFO 33804 --- [explorecali-jpa] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-25T15:29:36.327Z  INFO 33804 --- [explorecali-jpa] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-25T15:29:36.390Z  INFO 33804 --- [explorecali-jpa] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-02-25T15:29:36.421Z  INFO 33804 --- [explorecali-jpa] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-25T15:29:36.664Z  INFO 33804 --- [explorecali-jpa] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-25T15:29:37.604Z  INFO 33804 --- [explorecali-jpa] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-25T15:29:37.646Z  INFO 33804 --- [explorecali-jpa] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-25T15:29:38.159Z  WARN 33804 --- [explorecali-jpa] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-25T15:29:39.236Z  INFO 33804 --- [explorecali-jpa] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-02-25T15:29:39.310Z  INFO 33804 --- [explorecali-jpa] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-25T15:29:39.325Z  INFO 33804 --- [explorecali-jpa] [main] c.e.e.ExplorecaliJpaApplication          : Started ExplorecaliJpaApplication in 6.103 seconds (process running for 7.075)
+2025-02-25T15:29:47.454Z  INFO 33804 --- [explorecali-jpa] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-25T15:29:47.455Z  INFO 33804 --- [explorecali-jpa] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-25T15:29:47.458Z  INFO 33804 --- [explorecali-jpa] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-02-25T15:29:54.575Z  INFO 33804 --- [explorecali-jpa] [http-nio-8080-exec-10] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 506 ms
+2025-02-25T15:37:00.365Z  INFO 33804 --- [explorecali-jpa] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-25T15:37:00.388Z  INFO 33804 --- [explorecali-jpa] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-25T15:37:00.407Z  INFO 33804 --- [explorecali-jpa] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
